@@ -504,4 +504,186 @@
   
   
   
+  @media (max-width: 768px) {
+    .App {
+        flex-direction: column; /* Stack Aside and content vertically on smaller screens */
+        align-items: center;
+    }
+
+    .AsideBlock {
+        max-width: 100%;
+        margin-bottom: 20px; /* Add space between Aside and content */
+    }
+}
+
+
+/* Media queries for responsive layout */
+@media (max-width: 1200px) {
+  .App {
+      margin: 3% 5%;
+  }
+
+  .ProjectBox {
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .asideBlock {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .asideBlock {
+      flex-direction: row; /* Display aside horizontally */
+      align-items: center; /* Center content vertically */
+      max-width: 100%;
+      margin-bottom: 20px; /* Space between Aside and content */
+  }
+
+  .asideBlockContent {
+      flex-direction: row; /* Ensure internal content is horizontal */
+      gap: 15px; /* Add spacing between items */
+  }
+
+  .contactItem {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contactItemIcon {
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .TopSection h1 {
+      font-size: var(--fs-2);
+  }
+
+  .contactItem p, .Portfolio, .About, .Resume, .Contact {
+      font-size: var(--fs-5);
+  }
+}
+
+
+/* Base styles for the asideBlock */
+.asideBlock {
+  max-width: 280px;
+  background: var(--eerie-black-2);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+  backdrop-filter: blur(10px);
+  position: sticky; /* Keeps it visible on scroll */
+  top: 0; /* Adjust based on your layout */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .asideBlock {
+      position: static; /* Resets position for small screens */
+      max-width: 100%;
+      width: 100%;
+      border-radius: 0; /* Optional: Remove border radius for smaller screens */
+      padding: 10px;
+  }
+
+  .ProjectBox{
+  grid-template-columns: 1fr;}
+
+  .form-btn{
+    align-self:center;
+    width:97%;
+  }
   
+  .detailinput{
+     
+      grid-template-columns: 1fr;
+  }
+
+  .asideBlockInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .profilebox {
+      margin-bottom: 10px;
+  }
+
+  .name {
+      font-size: var(--fs-3);
+  }
+
+  .multiple-text {
+      font-size: var(--fs-5);
+  }
+
+  .morebutton {
+      font-size: var(--fs-5);
+  }
+
+  .asideBlockContact {
+      display: none; /* Hide contact details on small screens */
+  }
+}
+
+/* Styles for extra small screens */
+@media (max-width: 480px) {
+  .profilebox {
+      width: 70px;
+      height: 70px;
+  }
+
+  .name {
+      font-size: var(--fs-4);
+  }
+
+  .multiple-text {
+      font-size: var(--fs-6);
+  }
+
+  .morebutton {
+      font-size: var(--fs-6);
+  }
+
+  .social-list {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+  }
+
+  .social-item {
+      margin: 0 5px; /* Adjust spacing for social icons */
+  }
+}
+
+@media (max-width: 1000px) {
+  .boxes-container{
+      display: block; /* Switch to a single-column layout */
+  }
+  .boxes{
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 380px) {
+ 
+  .boxes{
+    flex-direction: column;
+    padding: 15%;
+  }
+  .SubTitle ,.Summary{
+    text-align: center;
+  }
+  .SubTitle{
+    margin-top: 0;
+  }
+}
+
