@@ -14,7 +14,6 @@ const Contact = () => {
     )
     console.log(FormData);
   }
-
   const handlesubmit = (e) => {
     e.preventDefault();
     const {name,email,message} = FormData;
