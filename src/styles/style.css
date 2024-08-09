@@ -530,6 +530,7 @@
   .asideBlock {
       max-width: 100%;
       margin-bottom: 20px;
+      
   }
 }
 
@@ -544,6 +545,7 @@
       align-items: center; /* Center content vertically */
       max-width: 100%;
       margin-bottom: 20px; /* Space between Aside and content */
+      
   }
 
   .asideBlockContent {
@@ -551,10 +553,12 @@
       gap: 15px; /* Add spacing between items */
   }
 
+  
+/* 
   .contactItem {
       flex-direction: column;
       align-items: center;
-  }
+  } */
 
   .contactItemIcon {
       margin-bottom: 10px;
@@ -590,8 +594,11 @@
       position: static; /* Resets position for small screens */
       max-width: 100%;
       width: 100%;
-      border-radius: 0; /* Optional: Remove border radius for smaller screens */
       padding: 10px;
+
+      /* display: flex; */
+    
+    align-items: center;
   }
 
   .ProjectBox{
@@ -613,6 +620,11 @@
       align-items: center;
   }
 
+  .asideBlockContent{
+    display: flex;
+    align-items: center;
+  }
+
   .profilebox {
       margin-bottom: 10px;
   }
@@ -631,16 +643,23 @@
 
   .asideBlockContact {
       display: none; /* Hide contact details on small screens */
+      
   }
 }
 
 /* Styles for extra small screens */
 @media (max-width: 480px) {
-  .profilebox {
+  /* .profilebox {
       width: 70px;
       height: 70px;
-  }
+  } */
 
+   .mobileNav{
+    padding: 15px;
+    width: 300px;
+  } 
+
+  
   .name {
       font-size: var(--fs-4);
   }
@@ -673,17 +692,143 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
+
+ 
  
   .boxes{
     flex-direction: column;
     padding: 15%;
   }
-  .SubTitle ,.Summary{
+
+  .SubTitle {
     text-align: center;
   }
+
+  .Summary{
+    text-align: justify;
+  }
+
   .SubTitle{
     margin-top: 0;
+  }
+
+  .navBar{
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  #message{
+    height:100px;
+  }
+
+  .asideBlock{
+    margin-top: 30px;
+  }
+
+  .profilebox{
+    padding: 0;
+    margin:20px;
+    margin-right: 0;
+  }
+
+  .morebutton{
+    margin-right: 30px;
+  }
+}
+
+
+
+.mobileNav {
+  display: none;
+}
+
+/* Styles for screens below 700px */
+@media screen and (max-width: 1000px) {
+  .Nav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .App{
+    flex-direction: column;
+    max-width: none;
+  }
+
+  .profile{
+    width:none;
+  }
+
+  .asideBlockContent{
+    display:flex;
+    flex-direction: column;
+    
+  }
+
+  .profile{
+    width:100px;
+  }
+
+  .asideBlock{
+    max-width: 100%;
+    
+  }
+
+  .profiletop{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .ProjectBox{
+    gap:100px;
+  }
+
+  
+}
+
+@media screen and (min-width: 1400px) {
+  .morebutton{
+    display: none;
+  }
+ 
+}
+
+/* General Styles */
+.morebutton {
+  display: none; /* Hide button by default */
+}
+
+.asideBlockContact {
+  display: none; /* Hide contact details by default */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 1500px) {
+  .morebutton {
+    display: block; /* Show button on smaller screens */
+  }
+
+  .asideBlockContact.visible {
+    display: block; /* Show contact details if 'visible' class is added */
+    width: 100%;
+  }
+
+  .asideBlockContact.hidden {
+    display: none; /* Hide contact details if 'hidden' class is added */
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+  .asideBlockContact {
+    display: block; /* Always show contact details on larger screens */
   }
 }
 

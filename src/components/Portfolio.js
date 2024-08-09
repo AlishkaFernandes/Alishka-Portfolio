@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import projects from './data'; // Ensure this is the correct path to your data file
 
 const Portfolio = () => {
@@ -12,6 +11,10 @@ const Portfolio = () => {
     return projects.filter((project) => project.type === category);
   };
 
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.value);
+  };
+
   const data = filterCategory(category);
 
   return (
@@ -22,10 +25,20 @@ const Portfolio = () => {
       </div>
 
       <div className="PortfolioSection">
-        <nav>
+        {/* Normal nav for screens wider than 700px */}
+        <nav className="Nav">
           <a href="#" onClick={() => setCategory('All')}>All</a>
           <a href="#" onClick={() => setCategory('Web Design')}>Web Design</a>
           <a href="#" onClick={() => setCategory('Web Development')}>Web Development</a>
+        </nav>
+
+        {/* Dropdown for screens narrower than 700px */}
+        <nav className="mobileNav">
+          <select onChange={handleCategoryChange} value={category}>
+            <option value="All">All</option>
+            <option value="Web Design">Web Design</option>
+            <option value="Web Development">Web Development</option>
+          </select>
         </nav>
         
         <ProjectDisplay data={data} />

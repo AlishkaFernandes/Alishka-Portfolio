@@ -22,6 +22,8 @@ const Aside = () => {
   return (
     <div className="asideBlock">
       <div className="asideBlockContent">
+
+        <div className='profiletop'>
         <figure className="profilebox">
           <img src={avatar} alt="Alishka Fernandes" className="profile" />
         </figure>
@@ -31,66 +33,72 @@ const Aside = () => {
           <span className="multiple-text"></span>
         </div>
 
-        <button className="morebutton" onClick={() => setShowContacts(!showContacts)}>
+        {/* Button is visible only on smaller screens */}
+        <button
+          className="morebutton"
+          onClick={() => setShowContacts(!showContacts)}
+        >
           {showContacts ? 'Hide Details' : 'Show Details'}
         </button>
+        </div>
 
-        {showContacts && (
-          <div className="asideBlockContact">
-            <div className="separator"></div>
-            <ul className="contactList">
-              <li className="contactItem">
-                <div className="contactItemIcon">
-                  <i className="bx bxs-envelope"></i>
-                </div>
-                <div className="contactDetail">
-                  <p className="contactType">EMAIL</p>
-                  <a href="mailto:alishkafernandes19@gmail.com">alishkafernandes19@gmail.com</a>
-                </div>
-              </li>
+        {/* Container for contact details */}
+        <div className={`asideBlockContact ${showContacts ? 'visible' : 'hidden'}`}>
+          <div className="separator"></div>
+          <ul className="contactList">
+            <li className="contactItem">
+              <div className="contactItemIcon">
+                <i className="bx bxs-envelope"></i>
+              </div>
+              <div className="contactDetail">
+                <p className="contactType">EMAIL</p>
+                <a href="mailto:alishkafernandes19@gmail.com">alishkafernandes19@gmail.com</a>
+              </div>
+            </li>
 
-              <li className="contactItem">
-                <div className="contactItemIcon">
-                  <i className="bx bxs-phone"></i>
-                </div>
-                <div className="contactDetail">
-                  <p className="contactType">PHONE</p>
-                  <a href="tel:7775049851">7775049851</a>
-                </div>
-              </li>
+            <li className="contactItem">
+              <div className="contactItemIcon">
+                <i className="bx bxs-phone"></i>
+              </div>
+              <div className="contactDetail">
+                <p className="contactType">PHONE</p>
+                <a href="tel:7775049851">7775049851</a>
+              </div>
+            </li>
 
-              <li className="contactItem">
-                <div className="contactItemIcon">
-                  <i className="bx bxs-calendar"></i>
-                </div>
-                <div className="contactDetail">
-                  <p className="contactType">LOCATION</p>
-                  <p>Goa, India</p>
-                </div>
-              </li>
-            </ul>
+            <li className="contactItem">
+              <div className="contactItemIcon">
+                <i className="bx bxs-calendar"></i>
+              </div>
+              <div className="contactDetail">
+                <p className="contactType">LOCATION</p>
+                <p>Goa, India</p>
+              </div>
+            </li>
+          </ul>
 
-            <div className="separator"></div>
+          <div className="separator"></div>
 
-            <ul className="social-list">
-              <li className="social-item">
-                <a href="#" className="social-link">
-                  <IonIcon name="logo-facebook" />
-                </a>
-              </li>
-              <li className="social-item">
-                <a href="#" className="social-link">
-                  <IonIcon name="logo-twitter" />
-                </a>
-              </li>
-              <li className="social-item">
-                <a href="#" className="social-link">
-                  <IonIcon name="logo-instagram" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
+          <ul className="social-list">
+            <li className="social-item">
+              <a href="#" className="social-link">
+                <IonIcon name="logo-facebook" />
+              </a>
+            </li>
+            <li className="social-item">
+              <a href="#" className="social-link">
+                <IonIcon name="logo-twitter" />
+              </a>
+            </li>
+            <li className="social-item">
+              <a href="#" className="social-link">
+                <IonIcon name="logo-instagram" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
       </div>
     </div>
   );
