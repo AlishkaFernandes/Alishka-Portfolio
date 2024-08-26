@@ -25,7 +25,7 @@ const Portfolio = () => {
       </div>
 
       <div className="PortfolioSection">
-        {/* Normal nav for screens wider than 700px */}
+        
         <nav className="Nav">
           <a href="#" onClick={() => setCategory('All')}>All</a>
           <a href="#" onClick={() => setCategory('Web Design')}>Web Design</a>
