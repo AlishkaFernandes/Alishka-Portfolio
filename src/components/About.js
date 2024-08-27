@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <div>
-        <h1 className="Title">About Me</h1>
+        <h1 className="Title">About <span className='title'>Me</span></h1>
         <div className="coloredSeparater"></div>
         <p className="Summary">
           Currently pursuing my MCA with a keen focus on web development, I’m passionate about creating dynamic and visually compelling user experiences. While I am still improving my skills in coding and design, my enthusiasm and dedication to continuous learning drive me to grow every day.
@@ -28,7 +28,7 @@ const About = () => {
 
         <div className="boxes-container">
           <div className="boxes">
-            <img src={webDev} alt="web development" className="webicons" />
+          <i class='bx bx-code-alt' ></i>
             <div>
               <h3 className="SubTitle">Web development</h3>
               <p className="Summary">High-quality development of sites at the professional level</p>
@@ -36,7 +36,7 @@ const About = () => {
           </div>
 
           <div className="boxes">
-            <img src={webDesign} alt="web Design" className="webicons" />
+          <i class='bx bx-paint' ></i>
             <div>
               <h3 className="SubTitle">Web design</h3>
               <p className="Summary">The most modern and high-quality design made at a professional level.</p>

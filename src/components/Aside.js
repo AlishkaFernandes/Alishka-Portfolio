@@ -6,7 +6,7 @@ import { IonIcon } from 'react-ion-icon';
 const Aside = () => {
   useEffect(() => {
     const typed = new Typed('.multiple-text', {
-      strings: ['Web Developer', 'Freelancer', 'Designer', 'Photographer'],
+      strings: ['Web Developer', 'Designer',"React Developer" ],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,
@@ -35,7 +35,7 @@ const Aside = () => {
 
         {/* Button is visible only on smaller screens */}
         <button
-          className="morebutton"
+          className="morebutton btn"
           onClick={() => setShowContacts(!showContacts)}
         >
           {showContacts ? 'Hide Details' : 'Show Details'}
@@ -79,23 +79,14 @@ const Aside = () => {
 
           <div className="separator"></div>
 
-          <ul className="social-list">
-            <li className="social-item">
-              <a href="#" className="social-link">
-                <IonIcon name="logo-facebook" />
-              </a>
-            </li>
-            <li className="social-item">
-              <a href="#" className="social-link">
-                <IonIcon name="logo-twitter" />
-              </a>
-            </li>
-            <li className="social-item">
-              <a href="#" className="social-link">
-                <IonIcon name="logo-instagram" />
-              </a>
-            </li>
-          </ul>
+          <div className="social-media">
+      <a href="#" aria-label="LinkedIn">
+        <i className='bx bxl-linkedin-square'></i>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <i className='bx bxl-instagram-alt'></i>
+      </a>
+    </div>
         </div>
 
 

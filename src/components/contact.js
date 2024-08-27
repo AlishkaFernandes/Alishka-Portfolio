@@ -35,21 +35,22 @@ const Contact = () => {
   return (
     <div className="contact">
        <header>
-      <h1 className="Title h2 article-title">Contact</h1>
+       <h1 className="Title h2 article-title">Contact <span className='title'>Me</span></h1>
       </header>
 
       <div className="coloredSeparater"></div>
 
       <section className="mapbox" data-mapbox>
                 <figure>
+                
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30751.077865886968!2d73.76842699999999!3d15.544308749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc1e37dbb59f5%3A0x9d0f9711b731c786!2sCalangute%2C%20Goa%20403519!5e0!3m2!1sen!2sin!4v1724784074083!5m2!1sen!2sin"
                         width="400" height="300" loading="lazy" title="Google Maps"
                     ></iframe>
                 </figure>
             </section>
       
-            <h1 className="Title h2 article-title">Contact Form</h1>
+            
             <form className="form" onSubmit={handlesubmit}>
   <div className="detailinput">
     <input type="text" id="name" name="name" placeholder="FullName" className="input" value={FormData.name} onChange={handleChange}/>

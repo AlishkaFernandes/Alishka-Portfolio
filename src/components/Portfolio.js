@@ -25,11 +25,29 @@ const Portfolio = () => {
       </div>
 
       <div className="PortfolioSection">
-        
+        {/* Desktop navigation */}
         <nav className="Nav">
-          <a href="#" onClick={() => setCategory('All')}>All</a>
-          <a href="#" onClick={() => setCategory('Web Design')}>Web Design</a>
-          <a href="#" onClick={() => setCategory('Web Development')}>Web Development</a>
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); setCategory('All'); }}
+            className={category === 'All' ? 'active' : ''}
+          >
+            All
+          </a>
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); setCategory('Web Design'); }}
+            className={category === 'Web Design' ? 'active' : ''}
+          >
+            Web Design
+          </a>
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); setCategory('Web Development'); }}
+            className={category === 'Web Development' ? 'active' : ''}
+          >
+            Web Development
+          </a>
         </nav>
 
         {/* Dropdown for screens narrower than 700px */}
@@ -49,9 +67,9 @@ const Portfolio = () => {
 
 const ProjectDisplay = ({ data }) => {
   return (
-    <div className="ProjectBox">
+    <div className="ProjectBox portfolio-box">
       {data.map((project, index) => (
-        <div className="projectbox" key={index}>
+        <div className="projectbox portfolio-layer" key={index}>
           <div className="ProjectImage">
             <img src={project.img} alt={project.name} />
           </div>
