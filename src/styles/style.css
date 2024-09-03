@@ -1027,8 +1027,12 @@
   border-radius: 20px;
 }
 
+.mobileNavcategory {
+  display: none; /* Show the dropdown on small screens */
+}
+
 /* Show the dropdown on screens narrower than 700px */
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .mobileNavcategory {
     display: block; /* Show the dropdown on small screens */
   }
