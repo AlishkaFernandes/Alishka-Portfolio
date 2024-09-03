@@ -7,8 +7,8 @@
     --smoky-black: hsl(0, 0%, 7%);
     --white-1: hsl(0, 0%, 100%);
     --white-2: hsl(0, 0%, 98%);
-    --orange-yellow-crayola: hsl(45, 100%, 72%);
-    --vegas-gold: hsl(45, 54%, 58%);
+    /* --orange-yellow-crayola: hsl(45, 100%, 72%); */
+    /* --vegas-gold: hsl(45, 54%, 58%); */
     --light-gray: hsl(0, 0%, 84%);
     --light-gray-70: hsla(0, 0%, 84%, 0.7);
     --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -81,8 +81,8 @@
   .asideBlockInfo {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center; /* Center the text */
+    
+   
   }
   
   .contactList {
@@ -117,7 +117,7 @@
   }
   
   .contactDetail a:hover {
-    color: var(--orange-yellow-crayola); /* Highlight on hover */
+    color: var(--main-color); /* Highlight on hover */
   }
   
   .contactItemIcon {
@@ -137,7 +137,7 @@
   
   .profilebox {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 100px;
+    border-radius: 20%;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -306,7 +306,7 @@
     height: 4px;
     background-color: var(--main-color);
     border-radius: 2px;
-    margin: 20px 0;
+    margin: 30px 0;
 }
   
   .PortfolioSection {
@@ -761,11 +761,10 @@
     margin-top: 30px;
   }
 
-  .profilebox{
+  /* .profilebox{
     padding: 0;
-    margin:20px;
     margin-right: 0;
-  }
+  } */
 
   .morebutton{
     margin-right: 30px;
@@ -794,11 +793,10 @@
   .App{
     flex-direction: column;
     max-width: none;
+    margin: 10%;
   }
 
-  .profile{
-    width:none;
-  }
+ 
 
   .asideBlockContent{
     display:flex;
@@ -806,21 +804,25 @@
     
   }
 
-  .profile{
-    width:100px;
-  }
+
 
   .asideBlock{
     max-width: 100%;
     position: static;
+    margin-bottom: 3%;
     
   }
 
   .profiletop{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+        align-items: center;
+        /* justify-content: space-between; */
+        margin: 0px 5%;
+        gap: 5%;
+    
   }
+
+
 
   .ProjectBox{
     gap:100px;
@@ -834,6 +836,11 @@
     display: none;
   }
  
+}
+
+.profilebox{
+  margin-left:0%;
+  margin-right:0%;
 }
 
 /* General Styles */
@@ -919,3 +926,140 @@
       display: block;
   }
 }
+
+
+@media (max-width: 780px) {
+  .profiletop{
+    display: flex;
+    align-items: center;
+    /* justify-content: start; */
+    /* margin: 10% 10%; */
+    width: 100%;
+    margin-left: 20%;
+
+  }
+}
+
+@media (max-width: 660px) {
+/*   
+    .profile {
+      width: 65px;
+  } */
+  .morebutton{
+    font-size: 10px;
+  }
+
+  .asideBlockInfo{
+    font-size: smaller;
+  }
+
+ 
+}
+
+
+@media (max-width: 600px) {
+  /* .profile {
+      width: 50px;
+  } */
+
+ .multiple-text, .name{
+    font-size: 13px;
+}
+
+.App{
+  margin: 5%;
+}
+}
+
+@media(max-width:400){
+  /* .profile{
+    width: 40px;
+  } */
+
+  .multiple-text, .name{
+    font-size: 10px;
+  }
+
+  .morebutton{
+    font-size: 0; /* Adjust the size as needed */
+    content: "\2193"; /* Unicode for down-pointing arrow */
+    font-family: Arial, sans-serif; /* Ensure the font supports the arrow symbol */
+  }
+
+  .app{
+    margin:2px;
+  }
+
+  .SubTitle{
+    margin-top: 20px;
+  }
+  
+}
+
+
+@media screen and (max-width:370px) {
+  .mobileNav.show {
+    width: 100%;
+  }
+  
+  .form{
+    margin: 0;
+  }
+  
+  h2.SubTitle{
+    margin-top: 50px;
+  }
+
+
+  .mapbox {
+    height: 200px; /* Adjust height as needed */
+    
+  }
+
+ 
+  
+}
+
+.mobileNavcategory select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+/* Show the dropdown on screens narrower than 700px */
+@media (max-width: 700px) {
+  .mobileNavcategory {
+    display: block; /* Show the dropdown on small screens */
+  }
+}
+
+.asideBlock {
+  position: relative; /* Make the asideBlock a containing block for absolutely positioned elements */
+}
+
+.morebutton {
+  position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: transparent; */
+    border: none;
+    /* font-size: 24px; */
+    /* cursor: pointer; */
+    width: 50px;
+    border-radius: 0 20% 0% 20%;
+    color: black;
+    font-size: medium;
+}
+
+.btn:focus {
+  outline: none; /* Remove the outline when the button is focused */
+}
+
+.name{
+  font-weight: var(--fw-900);
+}
+
+
+
+

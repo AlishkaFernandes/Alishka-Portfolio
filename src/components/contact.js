@@ -53,8 +53,8 @@ const Contact = () => {
             
             <form className="form" onSubmit={handlesubmit}>
   <div className="detailinput">
-    <input type="text" id="name" name="name" placeholder="FullName" className="input" value={FormData.name} onChange={handleChange}/>
-    <input type="email" id="email" name="email" placeholder="Email" className="input" value={FormData.email} onChange={handleChange}/>
+    <input type="text" id="name" name="name" placeholder="FullName" className="input" value={FormData.name} onChange={handleChange} required/>
+    <input type="email" id="email" name="email" placeholder="Email" className="input" value={FormData.email} onChange={handleChange} required/>
    
   </div>
   <textarea id="message" name="message" placeholder="Your Message" className="input textarea" required  onChange={handleChange} value={FormData.message}> </textarea>

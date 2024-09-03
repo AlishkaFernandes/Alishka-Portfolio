@@ -51,7 +51,7 @@ const Portfolio = () => {
         </nav>
 
         {/* Dropdown for screens narrower than 700px */}
-        <nav className="mobileNav">
+        <nav className="mobileNavcategory">
           <select onChange={handleCategoryChange} value={category}>
             <option value="All">All</option>
             <option value="Web Design">Web Design</option>
