@@ -843,17 +843,14 @@
   margin-right:0%;
 }
 
-/* General Styles */
-.morebutton {
-  display: none; /* Hide button by default */
-}
+
 
 .asideBlockContact {
   display: none; /* Hide contact details by default */
 }
 
 /* Styles for smaller screens */
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
   .morebutton {
     display: block; /* Show button on smaller screens */
   }
@@ -1066,4 +1063,13 @@
 
 
 
+@media(min-width:1451px){
+  .profilebox{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
+  .asideBlockInfo{
+    align-items: center;
+  }
+}
