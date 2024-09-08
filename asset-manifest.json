@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Alishka-Portfolio/static/css/main.99e1df77.css",
+    "main.js": "/Alishka-Portfolio/static/js/main.186e515e.js",
+    "static/js/453.1407b060.chunk.js": "/Alishka-Portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/project-6.png": "/Alishka-Portfolio/static/media/project-6.051fb2e2935685c4f1ae.png",
+    "static/media/project-4.png": "/Alishka-Portfolio/static/media/project-4.5a1aae0743b42f504f30.png",
+    "static/media/project-2.png": "/Alishka-Portfolio/static/media/project-2.eab852750058fe43d6ce.png",
+    "static/media/project-3.jpg": "/Alishka-Portfolio/static/media/project-3.958be988eb43058bd137.jpg",
+    "static/media/project-5.png": "/Alishka-Portfolio/static/media/project-5.61aa84035e8ff5a95a47.png",
+    "static/media/project-1.jpg": "/Alishka-Portfolio/static/media/project-1.2273185734a7aab2c003.jpg",
+    "static/media/web-development.svg": "/Alishka-Portfolio/static/media/web-development.b0598f2286897dd5ff5cad580f6f1fe7.svg",
+    "static/media/web-design.svg": "/Alishka-Portfolio/static/media/web-design.1bab19b8e2ad9e04c6fa4a9cef8e390d.svg",
+    "index.html": "/Alishka-Portfolio/index.html",
+    "main.99e1df77.css.map": "/Alishka-Portfolio/static/css/main.99e1df77.css.map",
+    "main.186e515e.js.map": "/Alishka-Portfolio/static/js/main.186e515e.js.map",
+    "453.1407b060.chunk.js.map": "/Alishka-Portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99e1df77.css",
+    "static/js/main.186e515e.js"
+  ]
+}
